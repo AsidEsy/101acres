@@ -1,0 +1,66 @@
+/* About Us Styles */
+.about-us-container {
+    max-width: 100vw;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-us-container h1 {
+    color: #333;
+  }
+  
+  .management-team,
+  .branches,
+  .contact-form,
+  .major-clients {
+    margin-top: 20px;
+  }
+  
+  .management-team h2,
+  .branches h2,
+  .contact-form h2,
+  .major-clients h2 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .management-team ul,
+  .branches ul,
+  .major-clients ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  
+.management-team {
+    margin-top: 40px;
+  }
+  
+  .slider-item {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .slider-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .slider-item h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .slider-item p {
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .slider-item .comment {
+    font-style: italic;
+  }
