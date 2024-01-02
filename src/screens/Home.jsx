@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Reviews from '../components/Review';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import Slider from 'react-slick';
 
 const Home = () => {
   const propertyListings = [
@@ -31,19 +32,55 @@ const Home = () => {
       price: '$250,000',
     },
   ];
+  const sliderImages = [
+    {
+      id: 1,
+      photo: 'https://wallpapers.com/images/hd/real-estate-digital-art-0kmi22tcj2x60lim.jpg',
+      comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      id: 2,
+      photo: 'https://e1.pxfuel.com/desktop-wallpaper/657/834/desktop-wallpaper-real-estate-agent-broker-thumbnail.jpg',
+      comment: 'Vivamus ullamcorper eros ut augue rhoncus, eget cursus purus fermentum.',
+    },
+    {
+      id: 3,
+      photo: 'https://img.freepik.com/free-photo/construction-concept-with-engineering-tools_1150-17809.jpg',
+      comment: 'Suspendisse potenti. Nullam ac rhoncus risus. Integer nec odio justo.',
+    },
+  ];
   const happyCustomers = 150;
   const successfulDealings = 300;
 
-  const services = [
-    'Property Valuation',
-    'Real Estate Consultation',
-    'Home Loans Assistance',
-    'Legal Support',
-  ];
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
     <div className="home">
       <Header></Header>
+      <Slider {...sliderSettings}>
+          {sliderImages.map((member) => (
+            <div key={member.id} className="homeSlider">
+              <img className='homeSliderImg' src={member.photo} alt={member.id} />
+            </div>
+          ))}
+        </Slider>
+        <div className="additional-info">
+        <div className="info-item">
+          <h2>Happy Customers</h2>
+          <p>{happyCustomers}+ Satisfied Customers</p>
+        </div>
+
+        <div className="info-item">
+          <h2>Successful Dealings</h2>
+          <p>{successfulDealings}+ Successful Dealings</p>
+        </div>
+      </div>
       <h1>Discover Your Dream Home</h1>
       <div className="property-list">
         {propertyListings.map((property) => (
@@ -56,17 +93,7 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="additional-info">
-        <div className="info-item">
-          <h2>Happy Customers</h2>
-          <p>{happyCustomers}+ Satisfied Customers</p>
-        </div>
-
-        <div className="info-item">
-          <h2>Successful Dealings</h2>
-          <p>{successfulDealings}+ Successful Dealings</p>
-        </div>
-      </div>
+     
 
       <Services></Services>
 <Reviews/>

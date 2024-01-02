@@ -1,0 +1,33 @@
+.branches {
+    text-align: center;
+  }
+  
+  .branches-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .branches-list li {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .branches-list li:hover {
+    transform: scale(1.1);
+  }
+  
+  .branches-list li.even {
+    transform: translateX(-10px);
+  }
+  
+  .branches-list li.odd {
+    transform: translateX(10px);
+  }
+  

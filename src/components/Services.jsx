@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faBuilding, faHandshake, faBalanceScale } from '@fortawesome/free-solid-svg-icons';
 import './styles.css';
 
-const Services = () => {
-  const servicesList = [
+export const servicesList = [
     {
       id: 1,
       title: 'Property Valuation',
@@ -29,8 +28,11 @@ const Services = () => {
       description: 'Legal advice and support throughout the real estate buying or selling process.',
       icon: faBalanceScale,
     },
-    // Add more dummy items as needed
+   
   ];
+
+const Services = () => {
+
 
   return (
     <div className="services-container">
