@@ -46,8 +46,6 @@ const About = () => {
     <div className="home">
       <Header></Header>
       <AboutUs />
-      <Services></Services>
-      <Reviews />
       <a href="your-whatsapp-chat-link" className="whatsapp-icon">
         <FontAwesomeIcon icon={faWhatsapp} size="3x" />
       </a>
