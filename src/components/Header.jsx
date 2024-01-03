@@ -10,11 +10,10 @@ function Header() {
       <div className="logo">
       <FontAwesomeIcon icon={faBuilding} color='' size="2x" />
       </div>
-        <span className='header-text'>101 Acres</span>
+        <span className='header-text'>Test site</span>
       <nav className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/contact">Contact Us</Link>
       </nav>
     </header>
   );
